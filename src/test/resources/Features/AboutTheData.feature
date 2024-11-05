@@ -25,6 +25,15 @@ Feature: About the  data page verification
       | Congressional Representatives and Senators             | Metadata XLSX | 11/02/2024          | Monthly       | Data by Geography, Data Explorer, HRSA Fact Sheets                                                                                                                                                              | Other Gov't |
 
 
+  Scenario: Verify the data for yearly refresh cycle
+    Given user navigate to application
+    When user goto "About the Data" inside "Data" menu
+    Then  user verify breadcrumb as "Home>Data>About the Data"
+    Then user verify the refresh cycle for monthly
+      | Data Source                                            | Metadata      | Date of Source Data | Refresh Cycle | Data Available In                                                                                                                                                                                               | Data Type   |
+      | Congressional Representatives and Senators             | Metadata XLSX | 11/02/2024          | Monthly       | Data by Geography, Data Explorer, HRSA Fact Sheets                                                                                                                                                              | Other Gov't |
+
+
 
 
 
